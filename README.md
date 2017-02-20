@@ -1,22 +1,33 @@
-# Wordpress Widget Example
+# Wordpress React Widget Example
+
+## Prerequisites
+
+* Node.js (https://nodejs.org/)
+* Yarn (https://yarnpkg.com/)
+
+## Development Tasks
+
+| Command | Description |
+|---------|-------------|
+| `yarn install` | Fetch dependencies and build binaries for any of the modules |
+| `yarn start` | Fire up Webpack Dev Server, app will go live on `http://localhost:6789` |
+| `yarn run build` | Bundle CSS and JS code using the `production` environment |
+| `yarn test` | Run test suite |
 
 ## Deploying to Wordpress
 
-Copy all of the following files to `wp-content\plugins\wordpress-widget-example`:
+Copy the content of the `build` directory along with the `wordpress-widget-example.php` file to `wp-content\plugins\wordpress-widget-example`:
 
 ```
 │─── wordpress-widget-example.php
 │
-├─── css
-│       main.9a0fe4f1.css
-│       main.9a0fe4f1.css.map
+├─── main.css
+├─── main.css.map
 │
-├─── js
-│       main.fdc4e6ad.js.map
-│       main.fdc4e6ad.js
+├─── main.js.map
+├─── main.js
 │
-└─── media
-        logo.5d5d9eef.svg
+└─── logo.svg
 ```
 
 ## Activating the Widget
@@ -31,6 +42,8 @@ The easiest way out is to [add a new text widget](http://i.imgur.com/bUWJ4mc.png
 
 ## Credits
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project is powered by [custom-scripts](https://github.com/fknussel/custom-scripts). Original instructions for putting this plugin together can be found [here](http://myappincome.co.uk/how-to-make-a-react-js-wordpress-plugin/).
 
-Instructions for creating the plugin [seen here](http://myappincome.co.uk/how-to-make-a-react-js-wordpress-plugin/).
+## License
+
+MIT

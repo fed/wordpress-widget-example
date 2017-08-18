@@ -7,6 +7,7 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "mustache": "^2.3.0",
     "npm-run-all": "^4.0.2",
     "react-scripts": "1.0.11",
     "rimraf": "^2.6.1"
@@ -16,8 +17,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postbuild": "npm-run-all --parallel widget:*",
-    "widget:config": "cp wordpress-widget-example.php build/wordpress-widget-example.php",
-    "widget:clean": "rimraf build/index.html build/favicon.ico"
+    "postbuild": "npm-run-all widget:config widget:rename widget:clean",
+    "widget:config": "node scripts/config.js && mustache build/config.json scripts/config.mustache > build/widget.php",
+    "widget:rename": "node scripts/rename.js",
+    "widget:clean": "rimraf build/index.html build/favicon.ico build/config.json build/asset-manifest.json build/manifest.json build/service-worker.js"
+
   }
 }

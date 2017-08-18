@@ -16,19 +16,7 @@
 
 ## Deploying to Wordpress
 
-Copy the content of the `build` directory along with the `wordpress-widget-example.php` file to `wp-content\plugins\wordpress-widget-example`:
-
-```
-│─── wordpress-widget-example.php
-│
-├─── main.*xxxxxx*.css
-├─── main.*xxxxxx*.css.map
-│
-├─── main.*xxxxxx*.js.map
-├─── main.*xxxxxx*.js
-│
-└─── logo.svg
-```
+Copy the content of the `build` directory to `wp-content\plugins\wordpress-widget-example`:
 
 ## Activating the Widget
 

@@ -1,6 +1,6 @@
 {
   "name": "wordpress-widget-example",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
@@ -21,6 +21,5 @@
     "widget:config": "node scripts/config.js && mustache build/config.json scripts/config.mustache > build/widget.php",
     "widget:rename": "node scripts/rename.js",
     "widget:clean": "rimraf build/index.html build/favicon.ico build/config.json build/asset-manifest.json build/manifest.json build/service-worker.js"
-
   }
 }

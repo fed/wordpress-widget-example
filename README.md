@@ -10,9 +10,9 @@
 | Command | Description |
 |---------|-------------|
 | `yarn install` | Fetch dependencies and build binaries for any of the modules |
-| `yarn start` | Fire up Webpack Dev Server, app will go live on `http://localhost:6789` |
-| `yarn run build` | Bundle CSS and JS code using the `production` environment |
-| `yarn test` | Run test suite |
+| `yarn start` | Run the app in development mode with live reload on `http://localhost:3000` |
+| `yarn build` | Generate an optimised, production-ready `build` folder |
+| `yarn test` | Run test suite in the interactive watch mode |
 
 ## Deploying to Wordpress
 
@@ -21,11 +21,11 @@ Copy the content of the `build` directory along with the `wordpress-widget-examp
 ```
 │─── wordpress-widget-example.php
 │
-├─── main.css
-├─── main.css.map
+├─── main.*xxxxxx*.css
+├─── main.*xxxxxx*.css.map
 │
-├─── main.js.map
-├─── main.js
+├─── main.*xxxxxx*.js.map
+├─── main.*xxxxxx*.js
 │
 └─── logo.svg
 ```
@@ -42,7 +42,7 @@ The easiest way out is to [add a new text widget](http://i.imgur.com/bUWJ4mc.png
 
 ## Credits
 
-This project is powered by [custom-scripts](https://github.com/fknussel/custom-scripts). Original instructions for putting this plugin together can be found [here](http://myappincome.co.uk/how-to-make-a-react-js-wordpress-plugin/).
+Original instructions for putting this plugin together can be found [here](http://myappincome.co.uk/how-to-make-a-react-js-wordpress-plugin/).
 
 ## License
 

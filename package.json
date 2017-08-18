@@ -2,20 +2,22 @@
   "name": "wordpress-widget-example",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "custom-scripts": "^0.1.4",
-    "npm-run-all": "^4.0.1"
-  },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.11",
+    "rimraf": "^2.6.1"
   },
   "scripts": {
-    "start": "custom-scripts start",
-    "build": "custom-scripts build",
-    "test": "custom-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "postbuild": "npm-run-all --parallel widget:*",
     "widget:config": "cp wordpress-widget-example.php build/wordpress-widget-example.php",
-    "widget:clean": "rm build/index.html build/favicon.ico"
+    "widget:clean": "rimraf build/index.html build/favicon.ico"
   }
 }
